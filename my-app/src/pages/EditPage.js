@@ -46,7 +46,7 @@ const EditPage = () => {
     const formData = new FormData();
     formData.append('title', title);
 
-    const strippedContent = content.replace(/<[^>]*>/g, ''); 
+    const strippedContent = content.replace(/<(?!img\s).*?>/g, ''); 
     formData.append('content', strippedContent);
 
     formData.append('userId', sessionStorage.getItem('userId'));
