@@ -40,7 +40,7 @@ const WritePage = () => {
       const response = await axios.post('http://localhost:8080/post/write', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
-          Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`,
+          access: `Bearer ${sessionStorage.getItem('accessToken')}`,
         },
       });
 

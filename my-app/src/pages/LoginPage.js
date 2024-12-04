@@ -24,7 +24,8 @@ const LoginPage = () => {
         const response = await axios.post('http://localhost:8080/user/authenticate', loginData);
   
         if (response.status === 200) {
-            const token = response.data.token;
+            const token = response.data;
+           
             sessionStorage.setItem('accessToken', token);
             sessionStorage.setItem('userId',userId);
             navigate('/list');

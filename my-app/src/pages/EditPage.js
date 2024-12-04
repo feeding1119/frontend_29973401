@@ -58,7 +58,7 @@ const EditPage = () => {
       const response = await axios.put(`http://localhost:8080/post/${id}/content`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
-          Authorization: `Bearer ${sessionStorage.getItem('accessToken')}`,
+          access: `Bearer ${sessionStorage.getItem('accessToken')}`,
         },
       });
 
