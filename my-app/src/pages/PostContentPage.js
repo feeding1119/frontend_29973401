@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap 스타일 불러오기
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 const PostContentPage = () => {
   const [post, setPost] = useState(null);
